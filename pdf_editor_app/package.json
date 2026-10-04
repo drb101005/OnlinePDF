@@ -1,0 +1,18 @@
+{
+  "name": "online-pdf-text-editor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare:viewer": "node scripts/copy-viewer-assets.mjs",
+    "dev": "npm run prepare:viewer && vite --config vite.config.js",
+    "build": "npm run prepare:viewer && vite build --config vite.config.js",
+    "preview": "vite preview --config vite.config.js"
+  },
+  "dependencies": {
+    "@pdftron/webviewer": "^12.2.0"
+  },
+  "devDependencies": {
+    "vite": "^6.4.3"
+  }
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>PDF Text Editor</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">PRIVATE, IN-BROWSER EDITING</p>
+        <h1>PDF Text Editor</h1>
+        <p class="subtitle">Open PDF · Double-click text to edit · Save PDF</p>
+      </div>
+      <div class="header-actions">
+        <input id="fileInput" class="file-input" type="file" accept="application/pdf,.pdf" aria-label="Choose a PDF file">
+        <button id="openBtn" class="button button-secondary" type="button" disabled>Open PDF</button>
+        <button id="downloadBtn" class="button button-primary" type="button" disabled>Save edited PDF</button>
+      </div>
+    </header>
+
+    <p id="status" class="status" role="status" aria-live="polite">Starting editor…</p>
+    <p id="licenseNotice" class="license-notice" hidden>Apryse trial exports include an evaluation watermark. A valid production license is needed for watermark-free PDFs.</p>
+
+    <section class="workspace" aria-label="PDF editor">
+      <div id="viewer" class="viewer"></div>
+    </section>
+    <p class="privacy-note">Text editing works on selectable PDF text. Scanned pages need OCR first. Your original file stays unchanged; saving downloads an edited copy.</p>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
